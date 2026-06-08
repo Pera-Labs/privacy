@@ -1,23 +1,31 @@
 {
-  "_doc": "Friday remote feature flags. Each app: `easProjectId`+`bundleId` identify the binary; `appStoreBuilds` lists iOS buildNumbers (CFBundleVersion strings) that have been submitted to App Store review. App at launch reads own bundleId+buildNumber; if its build is in appStoreBuilds → dev affordances (Bug bildir) hide. TF builds not yet in the list keep them visible. Add a buildNumber here right BEFORE clicking 'Submit for Review' in ASC.",
+  "_doc": "Friday remote feature flags. Each app default = flay HIDDEN. Set flayEnabled=true to expose the in-app bug reporter / snapshot panel to all users of that app. The Profile footer 3-tap remains as a per-device override regardless of this flag.",
   "_url": "https://pera-labs.github.io/privacy/flags.json",
-  "updatedAt": "2026-05-28T00:00:00Z",
+  "updatedAt": "2026-06-08T00:00:00Z",
   "apps": {
     "promptdrop": {
       "easProjectId": "2ac2138b-c954-44d4-bc21-758dc99c60c9",
       "bundleId": "live.promptdrop.app",
       "appStoreBuilds": [],
-      "bugReporterOverride": null
+      "bugReporterOverride": null,
+      "flayEnabled": false
     },
     "frekans": {
       "easProjectId": "e2f03e2e-0610-49fc-9052-b52beb1b1c62",
       "bundleId": "live.radio.stations",
       "appStoreBuilds": [],
-      "bugReporterOverride": null
+      "bugReporterOverride": null,
+      "flayEnabled": false
     },
     "_default": {
       "appStoreBuilds": [],
-      "bugReporterOverride": null
+      "bugReporterOverride": null,
+      "flayEnabled": false
+    },
+    "toneadapt": {
+      "easProjectId": "",
+      "bundleId": "live.toneadapt.app",
+      "flayEnabled": false
     }
   }
 }
