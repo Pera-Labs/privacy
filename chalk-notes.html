@@ -22,37 +22,54 @@
 </head>
 <body>
 <h1>Chalk Notes — Privacy Policy</h1>
-<div class="sub">Last updated: 16 July 2026</div>
+<div class="sub">Last updated: 18 July 2026</div>
 
 <h2>Overview</h2>
-<p>Chalk Notes is a personal chalkboard doodle journal. You draw quick sketches and save them into boards you organize yourself — Family, Ideas, Just for me, or any board you create. Chalk Notes is <strong>local-only</strong>: it is not a messaging app, and doodles are never sent to another person or device.</p>
+<p>Chalk Notes is a chalkboard doodle app for two people. You draw quick sketches on a board, and — if you've paired with someone using a one-time invite code — your doodles sync to the one board you share with them. Chalk Notes is not a social network and not a general messaging app: a board can only ever be shared between the two people who paired it.</p>
 
 <h2>Information We Collect</h2>
-<p>Chalk Notes does not ask for or collect your name, email, phone number, or location, and there is no account or sign-in. We collect a small amount of anonymous usage information to understand how the app is used and to fix bugs:</p>
+<p>Chalk Notes does not ask for your name, email, phone number, or location, and there is no account or sign-in. We use an anonymous, randomly generated device identifier (<code>deviceId</code>) to operate the app and, if you choose to pair a board, to sync doodles between the two paired devices. We also collect:</p>
 <ul>
-  <li>Anonymous usage events (e.g. which screen you opened, whether a doodle was saved) — no doodle content, board names, or personal identifiers are included in these events.</li>
-  <li>An anonymous, randomly generated device/subscription identifier (via RevenueCat) used only to manage optional subscriptions.</li>
+  <li>Anonymous usage events (e.g. which screen you opened, whether a doodle was saved) — these are tied to your anonymous <code>deviceId</code>, not to your name or contact details.</li>
+  <li>An anonymous, randomly generated subscription identifier (via RevenueCat) used only to manage optional subscriptions.</li>
   <li>If you choose to submit a bug report from within the app, a screenshot and short description you provide are sent to our support inbox so we can fix the issue. This only happens when you trigger it yourself — it is never automatic.</li>
 </ul>
 <p>None of this data is sold or used for advertising.</p>
 
-<h2>Local Storage</h2>
-<p>The app stores the following data <strong>only on your device</strong>:</p>
+<h2>Shared Boards &amp; Sync (appstudio.tools/chalksync)</h2>
+<p>If you create or join a shared board, the following data is sent to our sync service (hosted at <code>appstudio.tools/chalksync</code>) so it can be delivered to the other device on that board:</p>
 <ul>
-  <li>Your chalk doodles and the boards you organize them into</li>
-  <li>The doodle shown in your Home Screen widget</li>
+  <li>The doodles you draw on a shared board, so they can be delivered to the person you've paired with.</li>
+  <li>A one-time invite code, generated when you create a board, used once by the other person to pair with you. Once used, the code is no longer valid — no one else can join that board afterward.</li>
+  <li>Your anonymous <code>deviceId</code> and the anonymous <code>deviceId</code> of the person you've paired with, so the service knows which two devices belong to a board. We do not know who these device IDs belong to — we only see anonymous identifiers, never names, emails, or phone numbers.</li>
+</ul>
+<p>Doodles on a board are only ever synced between the two devices paired to that board. A board can have at most two participants, and a device only ever has access to boards it created or was invited to.</p>
+
+<h2>Local Storage</h2>
+<p>The app stores the following data on your device:</p>
+<ul>
+  <li>Your chalk doodles and the boards you organize them into (including shared boards, once synced)</li>
+  <li>The doodle shown in your Home Screen widget — for a shared board, this is the latest doodle the other person sent you</li>
   <li>App preferences</li>
 </ul>
-<p>Your doodles never leave your device except when you explicitly attach one to a bug report you choose to send us.</p>
+
+<h2>Your Rights &amp; Data Deletion</h2>
+<p>Because Chalk Notes has no accounts, your rights are exercised directly from the app or by contacting us:</p>
+<ul>
+  <li><strong>Leave a shared board</strong> — leaving a board disconnects your device from it; the other person is notified and your doodles are removed from your device.</li>
+  <li><strong>Delete a board</strong> — deleting a shared board you created removes it and its doodles from our sync service and disconnects the other participant.</li>
+  <li><strong>Report a board</strong> — if the person you paired with is misusing a shared board, you can report it from within the app; we review reports and may disable the board.</li>
+  <li><strong>Request full deletion</strong> — you can ask us to delete all sync data associated with your anonymous device identifier by contacting us at the link below.</li>
+</ul>
 
 <h2>Third-Party Services</h2>
-<p>Chalk Notes uses RevenueCat to manage optional subscriptions (Apple StoreKit handles all payment information; we never see your card details) and a lightweight analytics/bug-report service for the anonymous usage events and self-submitted bug reports described above.</p>
+<p>Chalk Notes uses RevenueCat to manage optional subscriptions (Apple StoreKit handles all payment information; we never see your card details), our own sync service (<code>appstudio.tools/chalksync</code>) to deliver doodles between paired devices, and a lightweight analytics/bug-report service for the anonymous usage events and self-submitted bug reports described above.</p>
 
 <h2>Children</h2>
-<p>Chalk Notes is rated 4+ and does not knowingly collect any data from children beyond the anonymous usage events described above.</p>
+<p>Chalk Notes is rated 4+ and does not knowingly collect any data from children beyond the anonymous usage and sync data described above.</p>
 
 <h2>Contact</h2>
-<p>For privacy questions: open an issue at <a href="https://github.com/aniltaskiran/chalk-notes-support">github.com/aniltaskiran/chalk-notes-support</a></p>
+<p>For privacy questions, or to request deletion of your sync data: open an issue at <a href="https://github.com/aniltaskiran/chalk-notes-support">github.com/aniltaskiran/chalk-notes-support</a></p>
 
 <h2>Changes</h2>
 <p>We may update this policy. Material changes will be reflected by updating the "Last updated" date above.</p>
